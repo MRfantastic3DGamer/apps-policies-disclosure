@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy & Data Handling - My Android App</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Marked.js (Markdown to HTML converter) -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        /* Define custom styles for typography within the markdown content */
+        #policy-container p { margin-bottom: 1rem; line-height: 1.75; }
+        #policy-container ul { list-style: disc; margin-left: 1.5rem; margin-bottom: 1rem; padding-left: 0.5rem; }
+        #policy-container ol { list-style: decimal; margin-left: 1.5rem; margin-bottom: 1rem; padding-left: 0.5rem; }
+        #policy-container h1, #policy-container h2, #policy-container h3 { font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; }
+        #policy-container h1 { font-size: 2.25rem; } /* text-4xl equivalent */
+        #policy-container h2 { font-size: 1.875rem; color: #1f2937; } /* text-3xl equivalent, dark gray */
+        #policy-container h3 { font-size: 1.5rem; color: #374151; } /* text-2xl equivalent */
+        #policy-container strong { font-weight: 800; }
+        #policy-container a { color: #2563eb; text-decoration: underline; }
+
+        /* Ensure smooth rendering and basic font */
+        body { font-family: 'Inter', sans-serif; background-color: #f9fafb; }
+    </style>
+</head>
+<body>
+
+    <!-- Main Content Wrapper -->
+    <div class="max-w-4xl mx-auto p-4 sm:p-8 bg-white shadow-xl rounded-xl my-10 border border-gray-100">
+
+        <!-- Header -->
+        <header class="pb-4 border-b border-gray-200 mb-6">
+            <h1 class="text-4xl font-extrabold text-gray-900">App Policies & Data Privacy</h1>
+            <p class="text-sm text-gray-500 mt-2">
+                Last updated: <span id="last-updated"></span>
+            </p>
+        </header>
+
+        <!-- Markdown Render Target -->
+        <div id="policy-container" class="prose max-w-none text-gray-700">
+            <!-- Content will be injected here by JavaScript -->
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-10 pt-6 border-t border-gray-200 text-center text-sm text-gray-500">
+            <p>&copy; <span id="current-year"></span> Dhruv Bansal. All rights reserved.</p>
+        </footer>
+
+    </div>
+
+    <!-- 
+        ====================================================
+        EDIT YOUR POLICY CONTENT HERE (in Markdown format)
+        ====================================================
+    -->
+    <template id="markdown-content">
+This Privacy Policy describes how App Fit Empire ("we," "us," or "our") collects, uses, protects, and shares data when fitness center owners and their staff ("Users") utilize the App Fit Empire application (the "Service").
+
+### 1. Information We Collect
+We collect information necessary to provide, maintain, and improve the Service. The data we collect falls into two main categories:A. User (Fitness Center Owner/Staff) Account InformationThis data is collected directly from the Owner or Staff member upon account creation and use.Identification & Contact Data: Name, email address, phone number (optional), and encrypted password for account login and management.Business Identification Data: The name, address, and type of the fitness center.Staff Role Data: Role assignments and permissions defined by the Owner for staff members, used to enforce Role-Based Access Control (RBAC).B. Member/Client Data (Stored by the Owner)The data stored by the Owner about their members is controlled by the Owner. We process this data on the Owner’s behalf.Basic Member Data: Name, contact information (phone, email), emergency contact details.Membership & Financial Data: Subscription status, payment history, attendance records, and membership duration.Health and Fitness Data (Sensitive): Relevant measurements (e.g., weight, body fat percentage, specific body metrics) and progress tracking notes.
+
+### 2. How We Use the Information
+We use the collected information exclusively to operate and provide the Service to the fitness center Owner:Service Provision: To create, maintain, and secure User accounts, and to manage all business operations within the app (e.g., managing memberships, tracking attendance, logging measurements).Role Enforcement: To enforce the detailed roles and permissions assigned by the Owner to staff members, ensuring staff only access the data authorized by the Owner.Analytics & Visuals: To generate internal visuals, graphs, and reports that show progress, trends, and other matrixes related to member activity and business health.Communication: To communicate important service updates or policy changes to the Owner.
+
+### 3. Data Storage and SecurityData Storage Location
+All application data is stored using Firebase (Google Cloud Firestore), a cloud-based database service.Security MeasuresWe are committed to protecting your data and employ the following security measures:Encryption: Data is encrypted both in transit (using HTTPS/TLS) and at rest within the Firebase infrastructure.Role-Based Access Control (RBAC): We implement strict RBAC based on the roles defined by the Owner, ensuring Staff members only have read/write access to the specific data and features permitted by their Owner.Authentication: User accounts are protected by multi-factor authentication where available, and all passwords are stored in an encrypted/hashed format.
+
+### 4. Data Disclosure and Sharing
+We do not sell, rent, or trade your personal or business data. We only disclose data in the following, limited circumstances:Service Providers: We share data with Google (via Firebase/Firestore) as a necessary function of storing the data and running the application. These providers are bound by confidentiality obligations.Legal Requirements: If required to do so by law, court order, or governmental regulation, we may disclose information to comply with legal processes.
+
+### 5. Data Retention
+We retain User account data and associated business/member data for as long as the account remains active. If an account is inactive or terminated, we may retain certain data for a limited period to comply with legal obligations or resolve disputes.
+
+### 6. Your Rights and Deletion Requests
+Owner RightsAs the Owner, you have control over the data you input. You can update, modify, or delete member records and business details at any time within the application.Data Deletion RequestsTo request the complete deletion of your User account, all associated business data, and all member data stored under your account, or for any other data-related inquiries, please contact the developers directly via email:Email: dhruv.bansal62903@gmail.comWe will promptly address and confirm the permanent deletion of your data upon verification of your identity as the account Owner.
+
+### 7. Changes to This Policy
+We may update this Privacy Policy from time to time. We will notify Owners of any significant changes by updating the "Effective Date" at the top of this policy and providing notice through the application or via email.Please note: This policy is provided to disclose our data practices. The fitness center Owner is responsible for ensuring their collection and use of member data complies with local privacy laws and regulations.
+    </template>
+    <!-- 
+        ====================================================
+        END OF POLICY CONTENT
+        ====================================================
+    -->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Setup the footer date
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            // 2. Get the Markdown content from the template
+            const markdownTemplate = document.getElementById('markdown-content');
+            const markdownText = markdownTemplate.innerHTML.trim();
+
+            // 3. Define the marked options (optional but good practice)
+            marked.setOptions({
+                gfm: true, // Use GitHub flavored markdown
+                breaks: true // Use GFM line breaks
+            });
+
+            // 4. Convert Markdown to HTML
+            const htmlContent = marked.parse(markdownText);
+
+            // 5. Inject the HTML into the container
+            const policyContainer = document.getElementById('policy-container');
+            policyContainer.innerHTML = htmlContent;
+
+            // 6. Extract the last updated date from the policy content
+            const dateMatch = markdownText.match(/Last updated: ([\w\s,]+)/i);
+            if (dateMatch && dateMatch[1]) {
+                document.getElementById('last-updated').textContent = dateMatch[1].trim();
+            } else {
+                // Fallback to today's date if not found in content
+                const today = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+                document.getElementById('last-updated').textContent = today;
+            }
+        });
+    </script>
+
+</body>
+</html>
