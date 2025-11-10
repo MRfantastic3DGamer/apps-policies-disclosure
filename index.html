@@ -2,61 +2,117 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>My Website Homepage</title>
-                <style>
-                        /* Basic styling for a clean look */
-                                body {
-                                            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-                                                        margin: 0;
-                                                                    padding: 40px;
-                                                                                background-color: #f8f8f8;
-                                                                                            color: #333;
-                                                                                                        line-height: 1.6;
-                                                                                                                }
-                                                                                                                        .container {
-                                                                                                                                    max-width: 800px;
-                                                                                                                                                margin: 0 auto;
-                                                                                                                                                            padding: 30px;
-                                                                                                                                                                        background-color: #ffffff;
-                                                                                                                                                                                    border-radius: 10px;
-                                                                                                                                                                                                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-                                                                                                                                                                                                        }
-                                                                                                                                                                                                                h1 {
-                                                                                                                                                                                                                            color: #222;
-                                                                                                                                                                                                                                        border-bottom: 2px solid #eee;
-                                                                                                                                                                                                                                                    padding-bottom: 10px;
-                                                                                                                                                                                                                                                            }
-                                                                                                                                                                                                                                                                    ul {
-                                                                                                                                                                                                                                                                                list-style-type: none;
-                                                                                                                                                                                                                                                                                            padding-left: 0;
-                                                                                                                                                                                                                                                                                                    }
-                                                                                                                                                                                                                                                                                                            li {
-                                                                                                                                                                                                                                                                                                                        margin: 15px 0;
-                                                                                                                                                                                                                                                                                                                                }
-                                                                                                                                                                                                                                                                                                                                        a {
-                                                                                                                                                                                                                                                                                                                                                    text-decoration: none;
-                                                                                                                                                                                                                                                                                                                                                                color: #007bff;
-                                                                                                                                                                                                                                                                                                                                                                            font-size: 1.1em;
-                                                                                                                                                                                                                                                                                                                                                                                        font-weight: 500;
-                                                                                                                                                                                                                                                                                                                                                                                                }
-                                                                                                                                                                                                                                                                                                                                                                                                        a:hover {
-                                                                                                                                                                                                                                                                                                                                                                                                                    text-decoration: underline;
-                                                                                                                                                                                                                                                                                                                                                                                                                            }
-                                                                                                                                                                                                                                                                                                                                                                                                                                </style>
-                                                                                                                                                                                                                                                                                                                                                                                                                                </head>
-                                                                                                                                                                                                                                                                                                                                                                                                                                <body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fit Empire - Legal & Privacy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .card {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+<body>
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                    <div class="container">
-                                                                                                                                                                                                                                                                                                                                                                                                                                            <h1>My Website</h1>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                    <p>Welcome to my collection of pages. Here is a list of all available topics:</p>
+    <div class="container mx-auto px-4 py-8">
+        <div class="max-w-4xl mx-auto">
+            
+            <!-- Header Section -->
+            <div class="text-center mb-12">
+                <h1 class="text-5xl font-extrabold text-white mb-4">
+                    Fit Empire
+                </h1>
+                <p class="text-xl text-white opacity-90">
+                    Legal Information & Privacy Policies
+                </p>
+            </div>
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                            <ul>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <li><a href="fit_empire_data_safty.html">fit empire data security </a></li>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </ul>
+            <!-- Cards Container -->
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+                
+                <!-- Privacy Policy Card -->
+                <a href="fit_empire_data_safty.html" class="card block bg-white rounded-xl shadow-lg p-8 hover:no-underline">
+                    <div class="flex items-start mb-4">
+                        <div class="bg-blue-100 rounded-full p-3 mr-4">
+                            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h2 class="text-2xl font-bold text-gray-900 mb-2">Privacy Policy</h2>
+                            <p class="text-gray-600 leading-relaxed">
+                                Learn how we collect, use, and protect your data. Understand your privacy rights and data handling practices.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="mt-6 flex items-center text-blue-600 font-semibold">
+                        Read Privacy Policy
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                    </div>
+                </a>
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </div>
+                <!-- Terms of Service Card -->
+                <a href="terms_of_service.html" class="card block bg-white rounded-xl shadow-lg p-8 hover:no-underline">
+                    <div class="flex items-start mb-4">
+                        <div class="bg-purple-100 rounded-full p-3 mr-4">
+                            <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h2 class="text-2xl font-bold text-gray-900 mb-2">Terms of Service</h2>
+                            <p class="text-gray-600 leading-relaxed">
+                                Review the terms and conditions for using Fit Empire. Understand your rights and responsibilities.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="mt-6 flex items-center text-purple-600 font-semibold">
+                        Read Terms of Service
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                    </div>
+                </a>
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </body>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </html>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+            </div>
+
+            <!-- Info Section -->
+            <div class="bg-white bg-opacity-20 backdrop-blur-sm rounded-xl p-6 text-center">
+                <p class="text-white text-sm leading-relaxed">
+                    <strong>Fit Empire</strong> is a comprehensive fitness center management application.<br>
+                    For questions or concerns, contact us at 
+                    <a href="mailto:dhruv.bansal62903@gmail.com" class="underline font-semibold hover:text-gray-200">
+                        dhruv.bansal62903@gmail.com
+                    </a>
+                </p>
+            </div>
+
+            <!-- Footer -->
+            <div class="text-center mt-8">
+                <p class="text-white text-sm opacity-75">
+                    &copy; <span id="current-year"></span> Dhruv Bansal. All rights reserved.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
